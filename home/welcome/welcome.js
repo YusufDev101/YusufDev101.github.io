@@ -51,6 +51,7 @@ function GetPokemon() {
         colortype;
       document.getElementById("PokemonLabel").style.color = colortype;
       document.getElementById("NamePokemon01").style.color = colortype;
+      document.getElementById("ButtonContinue").style.color = colortype;
 
       var xValues = ["hp", "atk", "dfn", "s-attk", "s-dfn", "spd"];
       var yValues = [
@@ -70,8 +71,8 @@ function GetPokemon() {
             {
               fill: false,
               lineTension: 0,
-              backgroundColor: "rgba(0,0,255,1.0)",
-              borderColor: "rgba(0,0,255,0.1)",
+              backgroundColor: colortype,
+              borderColor: colortype,
               data: yValues,
             },
           ],
