@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 body {
-  background: rgb(76, 76, 76);
+  background: #232526;
 }
 
 .container {
@@ -8,6 +8,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10%;
+  border-radius: 20px;
 }
 
 h1 {
