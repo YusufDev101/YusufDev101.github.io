@@ -11,30 +11,19 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="./animation.css">
   </head>
-  <body data-spy="scroll" data-target=".navbar" data-offset="50">
-    <div class="d-flex justify-content-around" style="background-color: #232526;">    
-    <nav class="navbar  navbar-expand-lg navbar-dark fixed-top" style="background-color: #232526;">     
-      <a class="navbar-brand" href="#" >
-        <div class="container">
-          <div class="row">
-            <div class="col-sm">
-              <img
-              src="https://icon-library.com/images/pokeball-desktop-icon/pokeball-desktop-icon-13.jpg"
-              width="30"
-              height="30"
-              class="d-inline-block align-top"
-              alt="Logo"
-            />        
-            </div>
-            <div class="col-sm">
-              <p style="color: black; margin-left: -20px"> Yusuf Khan</p>
-            </div>
-          </div>
-        </div>       
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #4b79a1;">
+      <a class="navbar-brand" href="#">
+        <img
+          src="https://icon-library.com/images/pokeball-desktop-icon/pokeball-desktop-icon-13.jpg"
+          width="30"
+          height="30"
+          class="d-inline-block align-top"
+          alt=""
+        />
+        Yusuf Khan
       </a>
       <button
         class="navbar-toggler"
@@ -48,39 +37,60 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div style="flex: 1"></div>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#section1"> Home </a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#"> Home <span class="sr-only">(current)</span></a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="#section2">Projects</a>
+            <a class="nav-link" href="#">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link"  href="#section3">About</a>
-          </li>
-        </ul>       
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Projects
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>         
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
       </div>
     </nav>
-  </div>
-
-
-
-  <div id="section1">    
-    <div 
-      style="height: 470px; background-image: linear-gradient(#232526, #414345);" >
+    <div
+      style="height: 450px; background-image: linear-gradient(#4b79a1, #283e51)">
       <div class="container" >
         <div class="row justify-content-md-center" >
-          <div class="col col-lg-4" style="margin-top: 150px;">
-            <h4 style="color: white">Hello</h4>
-            <p style="color: white"> Here is some stuff about me Here is some stuff about me Here is some stuff about me Here is some stuff about me Here is some stuff about me Here is some stuff about me</p>
+          <div class="col col-lg-4" style="margin-top: 120px;">
+            <h4>Hello</h4>
+            <p> Here is some stuff about me Here is some stuff about me Here is some stuff about me Here is some stuff about me Here is some stuff about me Here is some stuff about me</p>
           </div>
           <div class="col col-lg-2" >
           </div>
           <div class="col col-lg-5">
-            <img src="./resources/undraw_programming_re_kg9v.svg" width="400" type="image/svg+xml" style="margin-top: 90px">
+            <img src="./resources/undraw_programming_re_kg9v.svg" width="400" type="image/svg+xml" style="margin-top: 50px">
           </div>
         </div>
       </div>
@@ -128,32 +138,23 @@
       </div>
     </div>
 
-      <div class="container">
-        <div class="row justify-content-md-center">
-          <div class="col-5">
-            <div
-              class="shadow-lg p-3 mb-5 bg-white rounded"
-              style="height: 150px;"
-            ></div>
-          </div>
-          <div class="col-5">
-            <div
-              class="shadow-lg p-3 mb-5 bg-white rounded"
-              style="height: 150px;"            
-            ></div>
-          </div>        
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-5">
+          <div
+            class="shadow-lg p-3 mb-5 bg-white rounded"
+            style="height: 150px;"
+          ></div>
         </div>
+        <div class="col-5">
+          <div
+            class="shadow-lg p-3 mb-5 bg-white rounded"
+            style="height: 150px;"            
+          ></div>
+        </div>        
       </div>
-  </div>
-
-   <div id="section2" style="padding-top:50px;height:600px;color: #fff; background-color: #232526;">
-    <div class="particleContainer">
-      <div class="particle-1"></div>
     </div>
   </div>
-   
-   <div id="section3" style="padding-top:50px;height:600px;color: #fff; background-color: red;"></div> 
-
 
 
     <footer style="height: 50px">
