@@ -48,7 +48,7 @@ function GetPokemon() {
       let colortype = SetColor(PokeType);
 
       document.getElementById("PokemonImageCard").style.backgroundColor =
-        colortype;
+        "#3d4142";
       document.getElementById("PokemonLabel").style.color = colortype;
       document.getElementById("NamePokemon01").style.color = colortype;
       document.getElementById("ButtonContinue").style.color = colortype;
