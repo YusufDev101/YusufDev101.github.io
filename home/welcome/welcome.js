@@ -173,3 +173,5 @@ const SetImage = (name) => {
       return "./resources/icons/water.svg";
   }
 };
+
+// Convert es6
