@@ -8,6 +8,12 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./welcome/welcome.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -18,9 +24,18 @@
     <title>Yusuf Khan</title>
   </head>
   <body onload="GetPokemon()">
-    <div class="container" style="border-radius: 20px">
-      <h1>Yusuf Khan</h1>
-      <h2 id="PokemonLabel">Software Developer</h2>
+    <div
+      class="align-self-center"
+      style="
+        border-radius: 20px;
+        width: 65%;
+        height: 70vh;
+        margin: auto;
+        margin-top: 70px;
+      "
+    >
+      <!-- <h1>Yusuf Khan</h1>
+      <h2 id="PokemonLabel">Software Developer</h2> -->
       <div
         id="PokemonImageCard"
         class="service-details"
@@ -33,78 +48,73 @@
           id="ImagePokemon"
           src="https://thumbs.gfycat.com/DampSpanishCleanerwrasse-max-1mb.gif"
           alt="realm"
-          style="z-index: 2; margin-left: 10px; width: 250px; height: 250px"
+          style="z-index: 2; margin-left: 10px; width: 60%; height: 100%"
         />
+        <!-- id="PokemonLabel" -->
+
+        <h5
+          id="NamePokemon01"
+          style="
+            color: #bfbfbf;
+            margin-left: 10px;
+            margin-top: 10px;
+            position: absolute;
+          "
+        >
+          Loading...
+        </h5>
         <div class="service-text" style="background-color: #494e50">
           <div class="container">
-            <div class="row align-items-center">
-              <p
-                id="NamePokemon01"
-                style="margin-left: 45px; margin-top: -60px"
-              ></p>
+            <div class="col">
+              <div class="d-flex justify-content-center"></div>
+              <section style="padding: 40px">
+                <form id="account" method="post" style="margin-left: 20px">
+                  <h1 style="color: #bfbfbf">Login Here</h1>
+                  <hr />
+                  <div asp-validation-summary="All" class="text-danger"></div>
+                  <div class="form-group">
+                    <label asp-for="Input.Email" style="color: #bfbfbf"
+                      >Username</label
+                    >
+                    <input asp-for="Input.Email" class="form-control" />
+                    <span
+                      asp-validation-for="Input.Email"
+                      class="text-danger"
+                    ></span>
+                  </div>
+                  <div class="form-group">
+                    <label asp-for="Input.Password" style="color: #bfbfbf"
+                      >Password</label
+                    >
+                    <input asp-for="Input.Password" class="form-control" />
+                    <span
+                      asp-validation-for="Input.Password"
+                      class="text-danger"
+                    ></span>
+                  </div>
+
+                  <div class="form-group">
+                    <a
+                      href="#"
+                      class="neon-button"
+                      onclick="OpenPage()"
+                      style="
+                        height: 35px;
+                        text-align: center;
+                        margin: auto;
+                        padding: 4px;
+                      "
+                    >
+                      Continue
+                    </a>
+                  </div>
+                </form>
+              </section>
             </div>
           </div>
-          <div class="container">
-            <div class="row align-items-center">
-              <img
-                id="Type1"
-                src="./resources/icons/dark.svg"
-                alt="Type"
-                style="
-                  width: 40px;
-                  height: 40px;
-                  margin-left: 120px;
-                  margin-top: 10px;
-                "
-              />
-              <img
-                id="Type2"
-                src="./resources/icons/bug.svg"
-                alt="Type"
-                style="
-                  width: 40px;
-                  height: 40px;
-                  margin-left: 70px;
-                  margin-top: 10px;
-                "
-              />
-            </div>
-          </div>
-          <canvas id="myChart" style="width: 100%; height: 130px"></canvas>
         </div>
       </div>
     </div>
-    <div class="container" style="margin-top: 40px">
-      <div style="margin-top: -40px">
-        <img
-          id="PokemonImageFrontDefault"
-          src="https://thumbs.gfycat.com/DampSpanishCleanerwrasse-max-1mb.gif"
-          style="width: 120px; height: 120px"
-        />
-        <img
-          id="PokemonImageFrontShiny"
-          src="https://thumbs.gfycat.com/DampSpanishCleanerwrasse-max-1mb.gif"
-          style="width: 120px; height: 120px"
-        />
-        <img
-          id="PokemonImageBackDefault"
-          src="https://thumbs.gfycat.com/DampSpanishCleanerwrasse-max-1mb.gif"
-          style="width: 120px; height: 120px"
-        />
-        <img
-          id="PokemonImageBackShiny"
-          src="https://thumbs.gfycat.com/DampSpanishCleanerwrasse-max-1mb.gif"
-          style="width: 120px; height: 120px"
-        />
-      </div>
-    </div>
-    <div class="container" style="margin-top: -10px">
-      <a href="#" class="neon-button" onclick="OpenPage()"> Continue </a>
-      <!-- <button id="ButtonContinue" class="custom-btn btn-8" onclick="OpenPage()">
-        <span>Continue</span>
-      </button> -->
-    </div>
-
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
